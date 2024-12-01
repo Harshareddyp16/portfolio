@@ -17,13 +17,54 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Enhancements */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      header {
+        background: #333;
+        color: #fff;
+      }
+      .rounded-circle {
+        border: 3px solid #fff;
+      }
+      section h2 {
+        font-weight: bold;
+        color: #333;
+      }
+      .timeline-item {
+        margin-bottom: 2rem;
+      }
+      .timeline-item h3 {
+        font-weight: bold;
+      }
+      footer {
+        background: #222;
+        color: #ccc;
+      }
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+      }
+      .scroll-top i {
+        font-size: 24px;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Section -->
-    <header class="text-center py-5 bg-dark text-light">
+    <header class="text-center py-5">
       <div class="container">
         <img
-          src="assets/images/profile_picture.jpg"
+          src="assets/images/profile_picture.jpeg"
           alt="Profile Picture"
           class="rounded-circle mb-3"
           width="150"
@@ -56,6 +97,15 @@
               ><i class="ri-github-fill"></i></a
             >
           </li>
+          <li class="list-inline-item">
+            <a
+              href="assets/resume/Harsha_Pallypati_Resume.pdf"
+              target="_blank"
+              class="text-light"
+              download
+              ><i class="ri-file-download-line"></i></a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -83,16 +133,32 @@
         <h2 class="text-center mb-4">Skills</h2>
         <div class="row text-center">
           <div class="col-md-4">
-            <h4>Programming</h4>
-            <p>Python, Java, SQL, Scala, Shell Scripting</p>
+            <h4><i class="ri-code-line"></i> Programming Languages</h4>
+            <p>Python, Scala, SQL, Shell Scripting</p>
           </div>
           <div class="col-md-4">
-            <h4>Big Data</h4>
-            <p>Spark, Hadoop, Airflow, Hive, Kafka</p>
+            <h4><i class="ri-database-2-line"></i> Big Data & ETL Tools</h4>
+            <p>Apache Spark, Hadoop (HDFS, YARN), Airflow, Kafka, Snowflake, Databricks</p>
           </div>
           <div class="col-md-4">
-            <h4>Cloud</h4>
-            <p>AWS, GCP, Terraform, Docker</p>
+            <h4><i class="ri-cloud-line"></i> Cloud Technologies</h4>
+            <p>AWS (EMR, Glue, S3, Lambda, CloudWatch, Athena), GCP</p>
+          </div>
+          <div class="col-md-4">
+            <h4><i class="ri-database-line"></i> Databases</h4>
+            <p>MySQL, MongoDB, DynamoDB, Oracle</p>
+          </div>
+          <div class="col-md-4">
+            <h4><i class="ri-bar-chart-box-line"></i> Data Visualization</h4>
+            <p>Tableau, Power BI</p>
+          </div>
+          <div class="col-md-4">
+            <h4><i class="ri-tools-line"></i> Data Engineering Tools</h4>
+            <p>PySpark, Terraform, Data Modeling, Data Warehousing</p>
+          </div>
+          <div class="col-md-4">
+            <h4><i class="ri-file-code-line"></i> File Formats</h4>
+            <p>Avro, Parquet</p>
           </div>
         </div>
       </div>
@@ -103,60 +169,74 @@
       <div class="container">
         <h2 class="text-center mb-4">Work Experience</h2>
         <div class="timeline">
-          <!-- Experience 1 -->
           <div class="timeline-item">
             <h3>Kroger</h3>
             <p class="text-muted">Feb 2023 – Present</p>
-            <p>
-              Architected GenAI solutions and built serverless data pipelines
-              processing 10+ TB of sales data. Migrated ETLs to AWS, reducing
-              execution times by 30%.
-            </p>
+            <ul>
+              <li>Innovated with a GenAI PoC for inventory restocking based on user trends.</li>
+              <li>Processed 10+ TB of sales data with Spark, enabling critical user campaigns.</li>
+              <li>Migrated 12 ETLs to AWS, cutting costs by 25% and enhancing efficiency.</li>
+            </ul>
           </div>
-          <!-- Experience 2 -->
           <div class="timeline-item">
             <h3>MindTree</h3>
             <p class="text-muted">Jan 2019 – Jul 2021</p>
-            <p>
-              Created scalable Data Lakes and automated dashboards with
-              PowerBI. Engineered real-time data pipelines using Kafka and
-              Airflow.
-            </p>
+            <ul>
+              <li>Delivered 50+ actionable KPI dashboards with Tableau and Power BI.</li>
+              <li>Designed real-time pipelines with Kafka and Airflow for timely data delivery.</li>
+              <li>Optimized batch processing times by 30% with EMR clusters.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section class="bg-light py-5">
-      <div class="container text-center">
-        <h2>Education</h2>
-        <p>
-          <b>Master of Science</b>, Colorado State University, Fort Collins
-          (2017 – 2019)
-        </p>
-        <p>
-          <b>Bachelor of Technology</b>, Jawaharlal Nehru Technological
-          University (2013 – 2017)
-        </p>
+    <div class="ds-experience-section">
+      <div class="container">
+        <h2 class="text-center mb-4">Education</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Colorado State University</h3>
+            <p>Master of Science in Computer Information Systems</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Jawaharlal Nehru Technological University</h3>
+            <p>Bachelor of Technology in Computer Science</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
 
     <!-- Contact Section -->
-    <footer class="bg-dark text-light py-5 text-center">
+    <footer class="py-5 text-center">
       <div class="container">
-        <p class="mb-0">Email: harsharp16@gmail.com</p>
+        <p>Email: <a href="mailto:harsharp16@gmail.com">harsharp16@gmail.com</a></p>
         <p>Phone: +1 (970) 694-7304</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#" class="text-light"><i class="ri-arrow-up-line"></i></a>
-          </li>
-        </ul>
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <div class="scroll-top" id="scrollTop">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+    <script>
+      // Scroll to Top Button
+      const scrollTop = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTop.style.display = 'block';
+        } else {
+          scrollTop.style.display = 'none';
+        }
+      });
+
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
   </body>
 </html>
